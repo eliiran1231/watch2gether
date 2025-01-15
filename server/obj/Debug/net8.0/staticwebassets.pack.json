@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\tester.html",
+      "PackagePath": "staticwebassets\\tester.html"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\2vej4xk2.1yx.mp4",
+      "PackagePath": "staticwebassets\\uploads\\2vej4xk2.1yx.mp4"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\fzt5tuh0.quc.mp4",
+      "PackagePath": "staticwebassets\\uploads\\fzt5tuh0.quc.mp4"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\gj52s3rf.ypc.mp4",
+      "PackagePath": "staticwebassets\\uploads\\gj52s3rf.ypc.mp4"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\jdpztzq2.jvp.mp4",
+      "PackagePath": "staticwebassets\\uploads\\jdpztzq2.jvp.mp4"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\lkac2oto.0fu.mp4",
+      "PackagePath": "staticwebassets\\uploads\\lkac2oto.0fu.mp4"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\pxha05zh.bty.mp4",
+      "PackagePath": "staticwebassets\\uploads\\pxha05zh.bty.mp4"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\q4kkarfp.szl.mp4",
+      "PackagePath": "staticwebassets\\uploads\\q4kkarfp.szl.mp4"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\qqlik5ws.nks.mp4",
+      "PackagePath": "staticwebassets\\uploads\\qqlik5ws.nks.mp4"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\rwy0j5kl.ura.mp4",
+      "PackagePath": "staticwebassets\\uploads\\rwy0j5kl.ura.mp4"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\vd3exy5m.dzc.mp4",
+      "PackagePath": "staticwebassets\\uploads\\vd3exy5m.dzc.mp4"
+    },
+    {
+      "Id": "C:\\Users\\mma91\\OneDrive\\שולחן העבודה\\angular learn\\server\\wwwroot\\uploads\\zjwz0tbt.1fh.mp4",
+      "PackagePath": "staticwebassets\\uploads\\zjwz0tbt.1fh.mp4"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.server.props",
+      "PackagePath": "build\\server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.server.props",
+      "PackagePath": "buildMultiTargeting\\server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.server.props",
+      "PackagePath": "buildTransitive\\server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,18 @@
+@server_HostAddress = https://localhost:7015
+
+GET {{server_HostAddress}}/rooms/
+Accept: application/json
+
+###
+
+POST {{server_HostAddress}}/create
+Content-Type: application/json
+
+{
+    "nickname":"nigg",
+    "name": "guy",
+    "vidURL": "https://www.w3schools.com/tags/movie.mp4"
+}
+###
+GET {{server_HostAddress}}/watchingroom?id=1
+Accept: application/json

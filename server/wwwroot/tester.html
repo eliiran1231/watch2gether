@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignalR Chat Room</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+</head>
+<body>
+    <h1>SignalR Chat Room</h1>
+
+    <input type="text" id="roomName" placeholder="Room Name">
+    <button id="joinRoom">Join Room</button>
+    <br>
+
+    <input type="text" id="message" placeholder="Message">
+    <button id="sendMessage">Send Message</button>
+
+    <div id="messages"></div>
+
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/watchingHub") // Your Hub URL
+            .build();
+
+        connection.start()
+            .then(() => console.log("Connected to SignalR Hub"))
+            .catch(err => console.error("Connection failed:", err));
+
+        // Join a room
+        document.getElementById("joinRoom").addEventListener("click", function () {
+            const roomName = document.getElementById("roomName").value;
+            connection.invoke("JoinRoom", roomName)
+                .catch(err => console.error("Error joining room:", err));
+        });
+
+        // Send a message to the room
+        document.getElementById("sendMessage").addEventListener("click", function () {
+            const roomName = document.getElementById("roomName").value;
+            const message = document.getElementById("message").value;
+            connection.invoke("SendMessageToRoom", roomName, message)
+                .catch(err => console.error("Error sending message:", err));
+        });
+
+        // Receive messages from the server
+        connection.on("ReceiveMessage", function (message) {
+            const msgDiv = document.createElement("div");
+            msgDiv.textContent = message;
+            document.getElementById("messages").appendChild(msgDiv);
+        });
+    </script>
+</body>
+</html>
