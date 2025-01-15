@@ -1,0 +1,112 @@
+    #form-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #222;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    /* Container for form options */
+    #form-options {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    /* Style for each form option */
+    .form-option {
+        background-color: #333;
+        padding: 10px 20px;
+        width: 100%;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .form-option:hover {
+        background-color: #444;
+    }
+
+    .form-option.selected {
+        background-color: #555;
+    }
+
+    /* Style for the input field */
+    .form-input {
+        align-self: start;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 10px;
+        border: 2px solid #555;
+        border-radius: 8px;
+        width: calc(100% - 120px);
+        background-color: #333;
+        color: #fff;
+    }
+
+    .form-url::placeholder {
+        color: #aaa;
+    }
+
+    /* Style for the load button */
+    .load-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background-color: #555;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .load-button:hover {
+        background-color: #666;
+    }
+
+    .inputs-container{
+        text-align: start;
+    }
+
+    /* Video container styling */
+    .video-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    video {
+        border-radius: 8px;
+        border: 2px solid #555;
+    }
+
+    .button {
+        background-color: #ffffff;
+        /* White background for contrast */
+        color: #000000;
+        /* Black text */
+        padding: 8px 16px;
+        border: 2px solid #000000;
+        /* White border */
+        border-radius: 25px;
+        /* More rounded edges */
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+    .button:hover {
+        background-color: #ffca28;
+        /* Gold color on hover */
+        color: #000000;
+        border-color: #ffca28;
+    }
+    #close{
+        color: white;
+        width: min-content;
+        margin-left: auto;
+        cursor: pointer;
+    }

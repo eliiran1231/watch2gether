@@ -1,0 +1,28 @@
+p,a{
+    color: white;
+}
+.list-item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+#rooms-container{
+    max-height: 500px;
+    width: 50%;
+    margin-inline: auto;
+    overflow-y: auto;
+}
+#create-room{
+    float: right;
+}
+#toolbar{
+    height: 5vh;
+    width: 50%;
+    margin-inline: auto;
+}
+
+#toolbar *{
+    height: 100%;
+}

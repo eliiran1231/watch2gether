@@ -1,0 +1,14 @@
+<div id="room-settings">
+    @if(tab=="permissions"){
+        <select #participentSelector [value]="getParticpant()?.name" (change)="switchParticipant(participentSelector)" id="participents">
+            @for (participent of patricipants; track $index) {
+                <option id={{$index}}>{{participent.name}}</option>
+            }
+        </select>
+        <div id="permissions">
+            @for (permission of getParticpant()?.permissions | keyvalue; track $index) {
+                <mat-checkbox (change)="updatePermission($event, permission.key)" color="cyan" [disabled]="!me?.permissions?.managePermissions" [checked]='permission.value'>{{permission.key}}</mat-checkbox><br/>
+            }
+        </div>
+    }
+</div>

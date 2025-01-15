@@ -1,0 +1,10 @@
+#participents{
+  width: 100%;
+  text-align: center;
+  background-color: darkgrey;
+}
+
+.mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background{
+  border-color: #00c8ff;
+  background-color: #00c8ff;
+}

@@ -1,0 +1,67 @@
+<main>
+    @if (!me) {
+        <app-create-nickname (participantAdded)="handleMeJoind($event)" [roomId]="id"></app-create-nickname>
+    }
+    @if(!participantAllowedControl){
+        <app-allow-participation (allowed)="handleParticipiantAllowed()"></app-allow-participation>
+    }
+    <mat-sidenav-container>
+        <mat-sidenav #sidenavLeft mode="side" position="start" class="sidenav">
+            <div id="chat-container" class="sidenav-main">
+                <div class="sidenav-header">chat</div>
+                <div class="sidenav-options">
+                    <div id="chat-messages">
+                        @for (message of messages; track $index) {
+                            <div><b>{{message.author.name}}:</b> {{message.content}}</div>
+                        }
+                    </div>
+                    <input #chatInput [disabled]="!me?.permissions?.chat" (keydown.enter)="sendMessage(chatInput)" type="text" id="send-message">
+                </div>
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div mat-button class="menu" (click)="sidenavRight.toggle()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div (click)="sidenavLeft.toggle()" class="chat"><fa-icon size="2x" [icon]="comment"></fa-icon></div>
+            <div id="content">
+                <div id="video-container">
+                    <video #mainVideo [controls]="me?.permissions?.seeking" height="300px" [src]="vidURL|async"></video>
+                </div>
+            </div>
+            <div id="participents-container">
+                <div class="mini-header"><b>participents</b></div>
+                <div id="participents">
+                    @for(participent of patricipants | async; track $index){
+                        <div class="participent-bubble" (click)="bubbleClicked(sidenavRight,$index)" [id]="$index">{{participent.name}}</div>
+                    }
+                </div>
+            </div>
+        </mat-sidenav-content>
+        <mat-sidenav #sidenavRight mode="side" position="end" class="sidenav">
+            <div class="sidenav-main">
+                <div class="sidenav-header">
+                    settings
+                </div>
+                <div class="sidenav-options">
+                    @defer{
+                        <app-room-settings-component [me]="me" [patricipentId]="bubblePatricipent" [patricipants]="(patricipants|async)||[]" tab="permissions"></app-room-settings-component>
+                    }
+                    @loading(){
+                        loading...
+                    }
+                    @placeholder {
+                        no participents in this room
+                    }
+                    @error {
+                        an unexpected error occured
+                    }
+                    
+                </div>
+            </div>
+
+        </mat-sidenav>
+    </mat-sidenav-container>
+</main>

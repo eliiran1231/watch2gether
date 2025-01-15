@@ -1,0 +1,8 @@
+<div id="form-container">
+    <form (ngSubmit)="onSubmit()" name="nickname-form"> <!-- Use ngSubmit for form submission -->
+        <div class="inputs-container">
+            <input type="text" placeholder="nickname" class="form-input" [(ngModel)]="nickname" name="nickname" required>
+            <button name="load-button" type="submit" class="load-button">load room</button>
+        </div>
+    </form>
+</div>

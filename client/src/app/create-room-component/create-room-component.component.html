@@ -1,0 +1,29 @@
+<div id="form-container">
+    <div (click)="roomEvent.emit(false)" id="close">X</div>
+    <div id="form-options">
+        @for (srcOption of srcOptions; track $index) {
+            <div (click)="selectedSrcOption = srcOption" class="form-option">{{ srcOption }}</div>
+        }
+    </div>
+    
+    <form (ngSubmit)="onSubmit()">
+        <div class="inputs-container">
+            <input type="text" placeholder="nickname" class="form-input" [(ngModel)]="nickname" name="nickname" required>
+            <input type="text" placeholder="room name" class="form-input" [(ngModel)]="roomName" name="roomName" required>
+            <input #srcInput type={{selectedSrcOption}} [placeholder]="selectedSrcOption" class="form-input" ngModel name="srcInput">
+            <button type="button" (click)="load(srcInput.value)" class="load-button">Load</button>
+        </div>
+        
+        @if (videoSrc) {
+            <div class="video-container">
+                <video controls autoplay height="300px" src={{videoSrc}}></video>
+                <input type="hidden" [value]="videoSrc" [(ngModel)]="videoSrc" name="hiddenVideoSrc" required/>
+                <br/>
+                <button type="submit" class="button" id="create-room">Create</button>
+            </div>
+        }
+        @else if(uploadProgress > 0 && uploadProgress < 100){
+            <progress [value]="uploadProgress" max="100"></progress>
+        }
+    </form>
+</div>

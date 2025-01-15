@@ -1,0 +1,191 @@
+@keyframes fadeBackground{
+    to{
+        background-color: rgb(0, 200, 255);
+        color: black;
+    }
+}
+
+.mat-drawer-container {
+    background-color: #00000000;
+}
+
+p {
+    color: white;
+}
+
+#video-container {
+    border-radius: 25px;
+    background-color: white;
+    text-align: center;
+    width: min-content;
+}
+
+video {
+    margin: 50px;
+}
+
+fa-icon {
+    color: white;
+}
+
+mat-sidenav-container,
+main {
+    height: 100%;
+}
+
+#content,
+mat-sidenav-content {
+    display: flex;
+    flex: 1;
+}
+
+
+#content {
+    align-items: center;
+    justify-content: center;
+}
+
+mat-sidenav-conteiner {
+    background-color: none !important;
+    display: flex;
+}
+
+mat-sidenav-content {
+    position: relative;
+    flex-direction: column;
+}
+
+.sidenav {
+    background-color: #000000;
+    height: 100%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.participent-bubble {
+    width: 100px;
+    height: 100px;
+    background-color: #000000;
+    border-radius: 25px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    color: #ccc;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.participent-bubble:hover {
+    animation: fadeBackground 0.65s forwards;
+}
+
+#participents {
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #ccc;
+    /*center align of links*/
+}
+
+#participents-container {
+    width: 100%;
+}
+
+.mini-header {
+    text-align: center;
+    background-color: rgb(0, 200, 255);
+}
+
+.line {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+}
+
+.menu {
+    align-self: flex-end;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    position: fixed;
+}
+
+#controls {
+    margin-top: 0px;
+}
+
+.chat {
+    width: min-content;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#chat-messages {
+    text-align: center;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#chat-container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+#send-message {
+    width: 100%;
+    background-color: #00000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#send-message:focus {
+    outline: none;
+    width: 100%;
+    background-color: #00000000;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.sidenav-header{
+    background-color: #000000;
+    color: white;
+    top: 0;
+    text-align: center;
+}
+.sidenav-main{
+    display: flex;
+    flex-direction:column;
+    height: 100%;
+}
+.sidenav-header{
+    text-align: center;
+}
+.sidenav-options{
+    padding: 20px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #ccc;
+}
+app-create-nickname,app-allow-participation{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    align-content: center;
+    background-color: #0000006f;
+}
+app-create-nickname{
+    z-index: 1000;
+}
+app-allow-participation{
+    z-index: 999;
+}
